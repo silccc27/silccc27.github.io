@@ -1,0 +1,15 @@
+---
+layout: default
+title: categories
+---
+
+<h1>Categories</h1>
+
+<ul>
+  {% for cat in site.categories %}
+  <li>
+    <h2><a href="{{ cat.url }}">{{ cat.name }}</a></h2>
+    <p>{{ cat.content | markdownify }}</p>
+  </li>
+  {% endfor %}
+</ul>
